@@ -1,0 +1,57 @@
+div{
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:justify;
+}
+
+#naglowek{
+	text-align:right;
+	font-size:40px;
+	font-style:italic;
+	font-weight:bold;
+	letter-spacing:5px;
+	margin-bottom:0px;
+}
+
+#akapit1{
+	margin-top:0px;
+	text-indent:50px;
+	line-height:2;
+}
+
+#tlo{
+	background-color:blueviolet;
+	color:white;
+}
+
+.rozmiar{
+	font-size:small;
+}
+
+.kolor{
+	color:orange;
+}
+
+#akapit2{
+	font-family:Arial;
+	text-indent:50px;
+}
+
+#tr{
+	color:blue;
+	text-transform:uppercase;
+}
+
+#akapit3{
+	color:green;
+	text-indent:50px;
+}
+
+#odstep{
+	word-spacing:30px;
+}
+
+sup,sub{
+	color:darkorchid;
+}

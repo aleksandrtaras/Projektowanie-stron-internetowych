@@ -1,0 +1,26 @@
+body#body1{
+	background-color:gray;
+	color:white;
+
+}
+p#one{
+	text-align:left;
+}
+
+p#two{
+	text-align:justify;
+}
+
+p#three{
+	text-align:right;
+}
+
+b{
+	color:red;
+}
+
+i{
+	font-family:verdana;
+	font-size:25pt;
+	color:green;
+}

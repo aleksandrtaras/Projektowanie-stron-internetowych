@@ -1,0 +1,44 @@
+Aleksander Taras. INF.03 gr 8
+CREATE DATABASE zadanie_praktyczne;
+
+CREATE TABLE ocena (
+    identyfikator INT AUTO_INCREMENT,
+    oceny INT,
+    id_przedmiotu INT,
+    PRIMARY KEY (identyfikator)
+);
+
+CREATE TABLE przedmiot (
+    identyfikator INT AUTO_INCREMENT,
+    nauczytiel CHAR(30),
+    nazwa_przedmiotu CHAR(30),
+    id_ucznia INT,
+    PRIMARY KEY (identyfikator)
+);
+
+CREATE TABLE uczniowie (
+    identyfikator INT AUTO_INCREMENT,
+    imie CHAR(30),
+    nazwisko CHAR(30),
+    adres TEXT,
+    data_urodzenia DATE,
+    miejsce_urodzenia TEXT,
+    imiona_rodzicow TEXT,
+    telefon_kontaktowy BIGINT,
+    klasa CHAR(5),
+    numer_legitymacji BIGINT,
+    numer_paszportu BIGINT,
+    PRIMARY KEY (identyfikator)
+);
+
+INSERT INTO `ocena`(`identyfikator`, `oceny`, `id_przedmiotu`) VALUES ('','5','3'),('','6','1'),('','3','2');
+
+INSERT INTO `przedmiot`(`identyfikator`, `nauczytiel`, `nazwa_przedmiotu`, `id_ucznia`) VALUES ('','adam bond','chemia','1'),
+('','agata born','jezyk polski','3'),('','robert koch','historia','2');
+
+INSERT INTO `uczniowie`(`identyfikator`, `imie`, `nazwisko`, `adres`, `data_urodzenia`, `miejsce_urodzenia`, `imiona_rodzicow`, `telefon_kontaktowy`, `klasa`, `numer_legitymacji`, `numer_paszportu`) VALUES ('','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]','[value-9]','[value-10]','[value-11]'),('','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]','[value-9]','[value-10]','[value-11]'),
+('','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]','[value-9]','[value-10]','[value-11]');
+
+ALTER TABLE ocena ADD FOREIGN KEY (id_przedmiotu) REFERENCES przedmiot(identyfikator);
+
+ALTER TABLE przedmiot ADD FOREIGN KEY (id_ucznia) REFERENCES uczniowie(identyfikator);
